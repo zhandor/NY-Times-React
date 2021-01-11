@@ -1,0 +1,41 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+		"plugin:react/recommended",
+        "standard"
+	],
+	"parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+		"arrow-spacing":"warn",
+		"arrow-parens":0,
+		"brace-style":"warn",
+		"camelcase":"warn",
+		"consistent-this":"warn",
+		"eol-last":"warn",
+		"indent":["error", "tab"],
+		"newline-before-return":"warn",
+		"no-alert": "warn",
+		"no-catch-shadow":"warn",
+		"no-confusing-arrow":"warn",
+		"no-console":"warn",
+		"no-extra-parens":"warn",
+		"space-infix-ops":"warn",
+		"no-use-before-define":"off",
+		"space-before-function-paren":"off",
+		"no-tabs": ["error", { "allowIndentationTabs": true }],
+		"react/prop-types": 0
+    }
+}
