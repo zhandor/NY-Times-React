@@ -11,21 +11,27 @@ export default class NewsCard extends React.Component {
 	}
 
 	render() {
+		const { data } = this.state
+		const media = data.multimedia[0]
+		console.log(data)
+
 		return (
 			<Card>
 				<CardActionArea>
 					<CardContent>
-						<Typography>News Section Subsection</Typography>
-						<Typography>News Title</Typography>
+						<Typography variant='subtitle1'>
+							{data.section} {(data.subsection)?' >> ' + data.subsection : ''}
+						</Typography>
+						<Typography variant='h5'>{data.title}</Typography>
 					</CardContent>
 					<CardMedia
 						component="img"
-						image={this.state.data.thumb}
-						title={this.state.data.thumbToolTip}
+						image={media.url}
+						title={media.caption}
 						height="80"/>
 					<CardContent>
-						<Typography>Thumb Credit</Typography>
-						<Typography>Author name</Typography>
+						<Typography>{media.copyright}</Typography>
+						<Typography>{data.byline}</Typography>
 						<p>tags</p>
 					</CardContent>
 				</CardActionArea>
