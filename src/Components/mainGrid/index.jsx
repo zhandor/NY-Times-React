@@ -19,27 +19,23 @@ export default class MainGrid extends React.Component {
 		}
 	}
 
-	acao = (valor) => {
-		this.props.onClick(valor)
-	}
-
 	render() {
 		return (
 			<div className={this.classes.root}>
-				<Grid container spacing={3} ma style={{ margin: '60px' }}>
+				<Grid container spacing={3} style={{ margin: '60px' }}>
 					<Grid item xs={1}></Grid>
-					<Grid item xs={4}>
+					<Grid item xs={4} onClick={() => this.props.reload('technology')}>
 						<MainCard
 							image = '../../Resources/images/Technology.jpg'
-							onClick={this.acao('tech')}>
+						>
 								TECHNOLOGY
 						</MainCard>
 					</Grid>
 					<Grid item xs={1}/>
-					<Grid item xs={4}>
+					<Grid item xs={4} onClick={() => this.props.reload('science')}>
 						<MainCard
 							image = '../../Resources/images/Science.jpg'
-							onClick={this.acao('science')}>
+						>
 								SCIENCE
 						</MainCard>
 					</Grid>
