@@ -2,9 +2,9 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 
-import Cards from '../cards'
+import MainCard from '../mainCard'
 
-export default class CustomGrid extends React.Component {
+export default class MainGrid extends React.Component {
 	classes = makeStyles({
 		root: {
 			flexGrow: 1,
@@ -19,17 +19,29 @@ export default class CustomGrid extends React.Component {
 		}
 	}
 
+	acao = (valor) => {
+		this.props.onClick(valor)
+	}
+
 	render() {
 		return (
 			<div className={this.classes.root}>
 				<Grid container spacing={3} ma style={{ margin: '60px' }}>
 					<Grid item xs={1}></Grid>
 					<Grid item xs={4}>
-						<Cards image = '../../Resources/images/Technology.jpg'>TECHNOLOGY</Cards>
+						<MainCard
+							image = '../../Resources/images/Technology.jpg'
+							onClick={this.acao('tech')}>
+								TECHNOLOGY
+						</MainCard>
 					</Grid>
 					<Grid item xs={1}/>
 					<Grid item xs={4}>
-						<Cards image = '../../Resources/images/Science.jpg'>SCIENCE</Cards>
+						<MainCard
+							image = '../../Resources/images/Science.jpg'
+							onClick={this.acao('science')}>
+								SCIENCE
+						</MainCard>
 					</Grid>
 					<Grid item xs={1}></Grid>
 				</Grid>

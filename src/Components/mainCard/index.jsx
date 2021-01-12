@@ -8,7 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia'
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 
-export default class Cards extends React.Component {
+export default class MainCard extends React.Component {
 classes = makeStyles({
 	root: {
 		maxWidth: 345,
