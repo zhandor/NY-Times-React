@@ -1,6 +1,8 @@
 import React from 'react'
 import { Card, CardActionArea, Typography, CardMedia, CardContent } from '@material-ui/core'
 
+import NewsModal from '../newsModal/'
+
 export default class NewsCard extends React.Component {
 	constructor(props) {
 		super(props)
@@ -13,26 +15,26 @@ export default class NewsCard extends React.Component {
 	render() {
 		const { data } = this.state
 		const media = data.multimedia[0]
-		console.log(data)
 
 		return (
 			<Card>
 				<CardActionArea>
 					<CardContent>
-						<Typography variant='subtitle1'>
-							{data.section} {(data.subsection)?' >> ' + data.subsection : ''}
+						<Typography variant='caption'>
+							{data.section} {(data.subsection) ? ' >> ' + data.subsection : ''}
 						</Typography>
-						<Typography variant='h5'>{data.title}</Typography>
+						<Typography variant='subtitle1'>{data.title}</Typography>
 					</CardContent>
 					<CardMedia
 						component="img"
 						image={media.url}
 						title={media.caption}
-						height="80"/>
+						height="150"/>
 					<CardContent>
-						<Typography>{media.copyright}</Typography>
-						<Typography>{data.byline}</Typography>
+						<Typography variant='caption'>{media.copyright}</Typography>
+						<Typography variant='caption'>{data.byline}</Typography>
 						<p>tags</p>
+						<NewsModal title={data.title} image={media.url} link={data.short_url} desc={data.abstract} author={data.byline}/>
 					</CardContent>
 				</CardActionArea>
 			</Card>
