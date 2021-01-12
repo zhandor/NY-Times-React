@@ -22,18 +22,16 @@ export default class App extends React.Component {
 		if (this.state.tela === 'inicial') {
 			return (
 				<div>
-					<h1>{this.state.tela}</h1>
 					<MainGrid reload={this.reload}/>
 				</div>
 			)
 		} else {
 			return (
 				<div>
-					<h1 onClick = {() => { this.reload('inicial') }}>
-						{this.state.tela}
-					</h1>
 					<NewsGrid type={this.state.tela}/>
-					<Buttons color='secondary' >Voltar</Buttons>
+					<div onClick = {() => { this.reload('inicial') }}>
+						<Buttons color='secondary'>Voltar</Buttons>
+					</div>
 				</div>
 			)
 		}

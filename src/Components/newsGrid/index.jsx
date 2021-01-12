@@ -50,7 +50,13 @@ export default class NewsGrid extends React.Component {
 			)
 		} else {
 			return (
-				<Grid container spacing={0} style={{ padding: '10px' }}>
+				<Grid
+					container
+					direction="row"
+					justify="space-evenly"
+					alignItems="baseline"
+					spacing={2}
+				>
 					{data.map((item, index) => {
 						return (
 							<Grid item xs={3} key={index}>

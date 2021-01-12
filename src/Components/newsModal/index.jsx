@@ -65,7 +65,7 @@ export default function NewsModal(props) {
 				<div style={modalStyle} className={classes.paper}>
 					<h2>{props.title}</h2>
 					<Button variant="contained" color="white" onClick={() => redirect(props.link)}>
-						See this article at the NY Times page
+						See the full article at the NY Times page
 					</Button>
 					<p>
 						{props.desc}

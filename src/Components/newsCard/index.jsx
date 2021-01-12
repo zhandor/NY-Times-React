@@ -15,6 +15,12 @@ export default class NewsCard extends React.Component {
 	render() {
 		const { data } = this.state
 		const media = data.multimedia[0]
+		const tags = data.des_facet
+		let str = ''
+		tags.forEach(element => {
+			str = str + ', ' + element
+		})
+		str = str.substring(2, str.length - 2)
 
 		return (
 			<Card>
@@ -33,7 +39,7 @@ export default class NewsCard extends React.Component {
 					<CardContent>
 						<Typography variant='caption'>{media.copyright}</Typography>
 						<Typography variant='caption'>{data.byline}</Typography>
-						<p>tags</p>
+						<p>Tags: {str}</p>
 						<NewsModal title={data.title} image={media.url} link={data.short_url} desc={data.abstract} author={data.byline}/>
 					</CardContent>
 				</CardActionArea>
