@@ -68,7 +68,7 @@ Git
 1. Clonar o repositório do Back (https://github.com/zhandor/NY-Times-Back)
 2. Clonar o repositório do Front (https://github.com/zhandor/NY-Times-React)
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/zhandor/NY-Times-React.git
    ```
 3. Install NPM packages
    ```sh
@@ -78,6 +78,7 @@ Git
 <!-- CONTACT -->
 ## Contact
 [![LinkedIn][linkedin-shield]][linkedin-url]
+
 Zhandor Gonzaga - [@zhandor](https://twitter.com/zhandor) - zhandorgonzaga@compasso.com.br
 
 Project Link: [https://github.com/zhandor/NY-Times-React](https://github.com/zhandor/NY-Times-React)
