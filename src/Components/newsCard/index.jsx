@@ -30,6 +30,7 @@ export default class NewsCard extends React.Component {
 							{data.section} {(data.subsection) ? ' >> ' + data.subsection : ''}
 						</Typography>
 						<Typography variant='subtitle1'>{data.title}</Typography>
+						<Typography variant='caption'>{data.byline}</Typography>
 					</CardContent>
 					<CardMedia
 						component="img"
@@ -38,7 +39,6 @@ export default class NewsCard extends React.Component {
 						height="150"/>
 					<CardContent>
 						<Typography variant='caption'>{media.copyright}</Typography>
-						<Typography variant='caption'>{data.byline}</Typography>
 						<p>Tags: {str}</p>
 						<NewsModal title={data.title} image={media.url} link={data.short_url} desc={data.abstract} author={data.byline}/>
 					</CardContent>
